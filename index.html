@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>BioMol</title>
+	<link rel="icon" href="./img/dna.webp">
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+	<script type="text/javascript" src="./scripts/bioscript.js"></script>
+	<style type="text/css">
+		body{
+			background-color: #F5F5F5;
+		}
+	</style>
+</head>
+<body>
+	<header class="flex flex-row ms-7 md:w-[96%] w-[90%] border-b-2 border-gray-400">
+		<img class="md:ms-7 ms-3 mt-5 mb-5 md:w-[250px] w-[130px]" src="./img/biomol.webp">
+		<div class="flex-grow min-w-50 flex justify-end">
+			<button
+			  id="openModal"
+			  class="bg-blue-500 hover:bg-blue-600 duration-300 cursor-pointer md:h-[35px] h-[30px] md:w-40 w-25 text-white md:text-[18px] text-[14px] rounded font-bold my-auto me-5">
+			  Aminoácidos
+			</button>
+		</div>
+	</header>
+	<form action="#" method="POST" class="mt-10 md:ms-12 ms-8 w-[85%] md:w-[90%]">
+		<label class="font-bold">DNA</label>
+		<textarea id="DNA" placeholder="Digite a sequência de DNA (ex.: ATCCCG...)" class="w-[100%] h-30 bg-white text-[16px] text-gray-600 mb-2"></textarea>
+		<label class="font-bold">RNA</label>
+		<textarea  id="RNA" class="w-[100%] h-30 bg-white text-[16px] text-[16px] text-gray-600 mb-2"></textarea ><br>
+		<label class="font-bold">Proteína</label>
+		<textarea  id="protein"class="w-[100%] h-30 bg-white text-[16px] text-[16px] text-gray-600"></textarea ><br>
+	</form>
+	<!-- MODAL -->
+	<div
+	  id="modalAmino"
+	  class="fixed inset-0 bg-black/50 hidden flex items-center justify-center z-50">
+	  <div class="bg-white rounded-lg shadow-lg w-[90%] md:w-[370px] p-5 relative">
+	    <h2 class="text-xl font-bold mb-3 text-blue-600 text-center">Lista de Aminoácidos</h2>
+	    <ul class="grid grid-cols-2 h-100">
+	    	<li class="text-gray-600 text-sm mb-4">F - Fenilamina</li>
+	    	<li class="text-gray-600 text-sm mb-4">L - Leucina</li>
+	    	<li class="text-gray-600 text-sm mb-4">I - Isoleucina</li>
+	    	<li class="text-gray-600 text-sm mb-4">V - Valina</li>
+	    	<li class="text-gray-600 text-sm mb-4">S - Serina</li>
+	    	<li class="text-gray-600 text-sm mb-4">P - Prolina</li>
+	    	<li class="text-gray-600 text-sm mb-4">T - Treonina</li>
+	    	<li class="text-gray-600 text-sm mb-4">A - Alanina</li>
+	    	<li class="text-gray-600 text-sm mb-4">Y - Tyrosina</li>
+	    	<li class="text-gray-600 text-sm mb-4">H - Histidina</li>
+	    	<li class="text-gray-600 text-sm mb-4">Q - Glutamina</li>
+	    	<li class="text-gray-600 text-sm mb-4">N - Asparigina</li>
+	    	<li class="text-gray-600 text-sm mb-4">K - Lisina</li>
+	    	<li class="text-gray-600 text-sm mb-4">D - Ácido Aspártico</li>
+	    	<li class="text-gray-600 text-sm mb-4">E - Ácido Glutâmico</li>
+	    	<li class="text-gray-600 text-sm mb-4">C - Cisteína</li>
+	    	<li class="text-gray-600 text-sm mb-4">W - Triptofano</li>
+	    	<li class="text-gray-600 text-sm mb-4">R - Arginina</li>
+	    	<li class="text-gray-600 text-sm mb-4">G - Glicina</li>
+	    	<li class="text-gray-600 text-sm mb-4">M - Metionina</li>
+	    </ul>
+	    <div class="flex justify-end gap-2">
+	      <button
+	        id="closeModal"
+	        class="md:h-[35px] h-[30px] md:w-20 w-15 rounded bg-red-500 hover:bg-red-600 text-sm text-white cursor-pointer duration-300 font-bold">
+	        Fechar
+	      </button>
+	    </div>
+	  </div>
+	</div>
+	<script>
+	  const modal = document.getElementById("modalAmino")
+	  const openBtn = document.getElementById("openModal")
+	  const closeBtn = document.getElementById("closeModal")
+
+	  openBtn.addEventListener("click", () => {
+	    modal.classList.remove("hidden")
+	  })
+
+	  closeBtn.addEventListener("click", () => {
+	    modal.classList.add("hidden")
+	  })
+
+	  // Fecha clicando fora do modal
+	  modal.addEventListener("click", (e) => {
+	    if (e.target === modal) {
+	      modal.classList.add("hidden")
+	    }
+	  })
+	</script>
+</body>
+</html>
