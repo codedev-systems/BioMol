@@ -5,4 +5,11 @@
 <p>A Bioinformática é uma área multidisciplinar que une a Computação e as Ciências Biológicas. Sua finalidade é realizar a coleta, armazenamento e o processamento de dados biológicos, como sequências de DNA, de RNA e de proteínas.</p>
 
 <h2>Como usar o BioMol?</h2>
-<p>Digite a sequência de DNA (ex.: AATTCCGCCCACTAAAATTTTTTACCACCCGGGATAACGGCCATGAAACCC) no campo correspondente. Automaticamente o BioMol realizará o processamento da sequência genética informada, gerando e exibindo as sequências de RNA e de aminoácidos.</p>
+<p>Digite a sequência de DNA (ex.: AATTCCGCCCACTAAAATTTTTTACCACCCGGGATAACGGCCATGAAACCC) no campo correspondente. Automaticamente o BioMol realizará o processamento da sequência genética informada, gerando e exibindo as sequências de RNA e de aminoácidos resultantes.</p>
+
+<p><b>Exemplo</b></p>
+<ul>
+  <li><b>Sequência de DNA digitada pelo usuário:</b> AATTCCGCCCACTAAAATTTTTTACCACCCGGGATAACGGCCATGAAACCC</li>
+  <li><b>Sequência de RNA resultante:</b> UUAAGGCGGGUGAUUUUAAAAAAUGGUGGGCCCUAUUGCCGGUACUUUGGG</li>
+  <li><b>Sequência de aminoácidos (proteína) resultante:</b> LRRVILKNGGPYCRYFG</li>
+</ul>
