@@ -13,3 +13,6 @@
   <li><b>Sequência de RNA resultante:</b> UUAAGGCGGGUGAUUUUAAAAAAUGGUGGGCCCUAUUGCCGGUACUUUGGG</li>
   <li><b>Sequência de aminoácidos (proteína) resultante:</b> LRRVILKNGGPYCRYFG</li>
 </ul>
+
+<h2>Acesse pelo link</h2>
+<p><a href="https://codedev-systems.github.io/BioMol/">https://codedev-systems.github.io/BioMol/</a></p>
